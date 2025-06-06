@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MultasController;
 
 Route::get('/multas', [MultasController::class, 'index']);
+Route::post('/multas', [MultasController::class, 'store']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
