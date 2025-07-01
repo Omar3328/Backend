@@ -22,7 +22,6 @@ class MultasController extends Controller
     {
         $request->validate([
             'descripcion' => 'required|string',
-            'departamento_id' => 'nullable|exists:departamentos,id',
             'valor' => 'required|numeric|min:0'
         ]);
 
